@@ -1,6 +1,11 @@
-FROM golang:1.16 AS builder
+FROM golang:1.18 AS builder
 
 WORKDIR /app/source
+
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+
 COPY ./ /app/source
 
 ARG CGO_ENABLED=0
