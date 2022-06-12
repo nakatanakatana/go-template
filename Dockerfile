@@ -2,8 +2,7 @@ FROM golang:1.18 AS builder
 
 WORKDIR /app/source
 
-COPY go.mod .
-COPY go.sum .
+COPY go.* .
 RUN go mod download
 
 COPY ./ /app/source
