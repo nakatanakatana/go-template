@@ -26,3 +26,8 @@ linters:
 linters-settings:
   stylecheck:
     checks: ["all", "-ST1005"]
+  tagliatelle:
+    case:
+      use-field-name: true
+      rules:
+        json: snake
