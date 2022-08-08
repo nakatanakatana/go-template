@@ -2,6 +2,7 @@ linters:
   disable:
     - exhaustivestruct
     - gochecknoglobals
+    - exhaustruct
 
     # deprecated
     - scopelint
@@ -31,3 +32,7 @@ linters-settings:
       use-field-name: true
       rules:
         json: snake
+  varnamelen:
+    ignore-decls:
+      - w http.ResponseWriter
+      - r *http.Request
