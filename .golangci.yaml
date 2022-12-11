@@ -34,5 +34,8 @@ linters-settings:
         json: snake
   varnamelen:
     ignore-decls:
+      - i int
+      - h http.Handler
       - w http.ResponseWriter
       - r *http.Request
+      - tt testcase
